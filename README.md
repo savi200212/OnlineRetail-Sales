@@ -23,6 +23,22 @@ The dataset used is the **Online Retail Dataset** from UCI/Kaggle, which contain
 This dataset is suitable for analyzing **sales performance**, **customer behavior**, and **product trends** across time and geography.
 
 ---
+### 📂  Folder Structure
+
+OnlineRetail-Sales/
+│
+├── Assignment_01_DataWarehouse/
+│   ├── Documents/                 # Assignment 1 Report (PDF with steps, screenshots)
+│   ├── SSIS_Package/              # SSIS packages (.dtsx, solution files)          
+│   ├── Sources/                   # Original CSV/Text files used in ETL
+│
+├── Assignment_02_BI_Analytics/
+│   ├── Cube/                      # SSAS SSDT cube project
+│   ├── Document/                  # Assignment 2 Report (PDF with steps, screenshots)
+│   ├── Excel_reports/             # OLAP Excel file (.xlsx)
+│   ├── PowerBI_Reports/           # Power BI .pbix reports 
+│
+├── README.md
 
 ### 📦 Assignment 01 – Data Warehouse Design & ETL
 
