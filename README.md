@@ -4,6 +4,7 @@
 This repository contains both parts of the Data Warehousing and Business Intelligence (DWBI) coursework. It demonstrates the full BI pipeline — from data extraction and transformation using **SSIS**, to analytical processing using **SSAS**, and reporting with **Power BI**.
 
 ---
+## 📁 Contents
 
 ## 📊 Dataset Description
 
@@ -23,59 +24,73 @@ This dataset is suitable for analyzing **sales performance**, **customer behavio
 
 ---
 
-## 📦 Part 1: ETL and Data Warehouse Design (SSIS)
+### 📦 Assignment 01 – Data Warehouse Design & ETL
 
-**Tools Used:** SQL Server, SSIS, Excel/CSV  
-- Extracted data from a CSV file and a SQL Server table (hybrid data sources).  
-- Applied transformations (data cleaning, type conversions, derived columns).  
-- Loaded data into a **star schema** in the data warehouse.  
-- Designed:
-  - **Slowly Changing Dimension (SCD)** for customer data  
-  - **Accumulating Fact Table** for sales transactions  
-- Created the following tables:
-  - `DimProduct` – Product metadata
-  - `DimCustomer` – Customer details and country
-  - `DimDate` – Calendar-based breakdown
-  - `FactSales` – Measures like Quantity, TotalAmount, etc.
+This part focuses on data warehouse creation and ETL pipelines using **SSIS**.
 
-📁 Folder: `/ETL_SSIS/`
+#### 🔹 Features:
+- Selected an **OLTP dataset** from an online retail domain.
+- Designed a **star schema** dimensional model:
+  - FactSales (with accumulating fact columns)
+  - DimProduct, DimCustomer, DimDate
+- Implemented **SSIS packages** for:
+  - Loading from multiple sources (CSV and SQL tables)
+  - Data cleansing and transformation
+  - Handling **Slowly Changing Dimensions (SCD)**
+  - Maintaining **accumulating fact table** logic with time tracking
+- Documented with diagrams, ETL flows, and explanations.
 
----
-
-## 📈 Part 2: OLAP and Reporting (SSAS & Power BI)
-
-**Tools Used:** SSAS, Excel, Power BI  
-- Built a **SSAS cube** with hierarchies and calculated measures  
-- Conducted OLAP operations: **drill-down**, **slicing**, **filtering**  
-- Connected Excel to the cube for pivot-based exploration  
-- Created Power BI dashboards featuring:
-  - **Matrix report** showing sales by product and country  
-  - **Cascading slicers** for region and product  
-  - **Drill-down** into monthly sales trends  
-  - **Drill-through** into customer-level data
-
-📁 Folder: `/SSAS_PowerBI/`
+📂 Folder: `Assignment_01_DataWarehouse`
 
 ---
 
-## 🗂️ Repository Structure
+### 📊 Assignment 02 – Business Intelligence & Analytics
 
-DWBI-Assignment/
-├── ETL_SSIS/
-│ ├── SSIS_Package.dtsx
-│ └── SQL_Scripts/
-├── SSAS_PowerBI/
-│ ├── CubeProject/
-│ └── PowerBIReports/
-│ └── SalesDashboard.pbix
-└── README.md
+This part builds on the data warehouse to implement analytical capabilities using **SSAS**, **Excel OLAP**, and **Power BI**.
 
-## ✅ Summary
+#### 🔹 Features:
+- Created an **SSAS cube** with:
+  - Proper measures and dimensions
+  - Hierarchies (e.g., Date hierarchy: Year → Quarter → Month)
+- Demonstrated OLAP operations via **Excel**:
+  - Roll-up, Drill-down, Slice, Dice, Pivot
+- Developed four interactive **Power BI reports**:
+  1. Matrix Report
+  2. Cascading Slicers with Charts
+  3. Drill-down Report
+  4. Drill-through Report
+- Published to Power BI Service and verified online access
 
-This project demonstrates a complete BI solution, from:
-- Data extraction (CSV + SQL Server)
-- Warehouse design and ETL (SSIS)
-- Analytical cube development (SSAS)
-- Insightful visualization (Power BI)
+📂 Folder: `Assignment_02_BI_Analytics`
 
-It highlights technical skills in **data modeling**, **ETL processes**, and **business reporting**.
+---
+
+## 🛠 Tools & Technologies
+
+- Microsoft SQL Server
+- SQL Server Integration Services (SSIS)
+- SQL Server Analysis Services (SSAS)
+- Excel (PowerPivot, PivotTables)
+- Power BI Desktop + Power BI Service
+- SQL, DAX
+
+---
+
+## 🧾 Documentation
+
+Each assignment includes a PDF document under its respective folder, containing:
+- Step-by-step process
+- Screenshots of implementation
+- ER diagrams and architecture
+- Explanations of transformations, modeling, and decisions
+
+---
+
+## 👤 Author
+
+- **Name**: Savindi Widyasekara    
+- **Course**: BSc (Hons) in IT – Data Science  
+
+---
+
+Feel free to explore each folder to see how data was transformed from raw sources to a fully functional business intelligence solution.
